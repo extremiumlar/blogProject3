@@ -30,10 +30,6 @@ class News(models.Model):
     class Meta:
         ordering = ['-publish_time']
 
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.title)  # Avtomatik slug yaratish
-        super().save(*args, **kwargs)
     def __str__(self):
         return self.title
     def get_absolute_url(self):

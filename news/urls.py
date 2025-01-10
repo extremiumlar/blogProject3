@@ -15,20 +15,22 @@ from .views import (
     SportPageView,
     IqtisodPageView,
     NewsUptadeView,
-    NewsCreateView,
     NewsDeleteView,
+    NewsCreateView,
 )
 
 urlpatterns = [
     path('news/', news_list, name='all_news_list'),
     # path('<int:id>/',news_detail,name='news_detail'),
-    path('news/<path:title>/', single_View, name='single'),
+    path('news/<str:title>/', single_View, name='single'),
     # path('news/<path:title>/edit', NewsUptadeView.as_view(), name='news_edit'),
     # path('news/<path:title>/edit/', NewsUptadeView.as_view(), name='news_edit'),
-    path('news/<slug:title>/edit/', NewsUptadeView.as_view(), name='news_edit'),
+    # path('news/<title>/edit/', NewsUptadeView.as_view(), name='news_edit'),
+# urls.py
+    path('news/<str:title>/edit/', NewsUptadeView.as_view(), name='news_edit'),
+    path('news/<str:title>/delete/', NewsDeleteView.as_view(), name='news_delete'),
+    path('news/create/', NewsCreateView.as_view(), name='news_create'),
 
-
-    path('news/<path:title>/delete', NewsDeleteView.as_view(), name='news_delete'),
     path('', HomeView.as_view(), name='home'),
     path('contact/', ContactPageView.as_view(), name='contact'),
     path('404/', page_404_View, name="page_404"),

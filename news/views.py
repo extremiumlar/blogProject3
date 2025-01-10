@@ -2,7 +2,7 @@ from asgiref.typing import HTTPRequestEvent
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView, ListView, UpdateView, CreateView, DeleteView
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from .models import News, Category
 from .form import ContactForm
 
@@ -106,29 +106,51 @@ class SportPageView(ListView):
     model = News
     template_name = 'news/sport.html'
     context_object_name = 'sport_news'
-    def queryset(self):
-        news = self.model.objects.all().filter(category__name = "Sport")
-        return news
+
+
+
+# views.py
+#
+# def NewsUptadeView(request,title):
+#     news_update = get_object_or_404(News, title=title,status=News.Status.Published)
+#     context = {'news_update':news_update}
+#     return render(request,'crud/update.html',context)
+
+# class NewsUptadeView(UpdateView):
+#     model = News
+#     fields = ['title', 'slug', 'body', 'image', 'status']
+#     template_name = 'crud/update.html'
+#     def queryset(self):
+#         news = self.model.objects.all()
+#         return news
 
 class NewsUptadeView(UpdateView):
     model = News
-    fields = ['title', 'slug', 'body', 'image', 'status']
+    fields = ['title', 'body', 'image', 'status']
     template_name = 'crud/update.html'
-    slug_field = 'slug'
-    slug_url_kwarg = 'title'
 
-    def get_success_url(self):
-        return reverse('single', kwargs={'title': self.object.slug})
+    def get_object(self, queryset=None):
+        # URL orqali kelgan 'title' qiymati asosida obyektni olish
+        title = self.kwargs.get('title')
+        return self.model.objects.get(title=title)
 
 
 class NewsCreateView(CreateView):
     model = News
-    fields = ['title','slug','body','image','category','status']
     template_name = 'crud/create.html'
+    fields = ('title', 'body', 'image', 'category', 'status')
+
 
 class NewsDeleteView(DeleteView):
     model = News
     template_name = 'crud/delete.html'
+    success_url = reverse_lazy('home')
+    def get_object(self, queryset=None):
+        # URL orqali kelgan 'title' qiymati asosida obyektni olish
+        title = self.kwargs.get('title')
+        return self.model.objects.get(title=title)
+
+
 
 
 
