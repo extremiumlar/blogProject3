@@ -1,0 +1,11 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block content %}
+    <h2>Veb saytga kirish</h2>
+    <p>Iltimos saytga kirish uchun quyidagi formani to'lgidiring !</p>
+    <form method="post">{% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Kirish"></input>
+    </form>
+{% endblock content %}

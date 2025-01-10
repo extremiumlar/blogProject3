@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 
-from django.conf.global_settings import STATICFILES_FINDERS
+from django.conf.global_settings import STATICFILES_FINDERS, LOGIN_REDIRECT_URL
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # O'zim yaratgan applar
-    'news'
+    'news',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,5 @@ STATICFILES_FINDERS=[
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
+
+LOGIN_REDIRECT_URL = 'home'
