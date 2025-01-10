@@ -138,7 +138,7 @@ class NewsUptadeView(UpdateView):
 class NewsCreateView(CreateView):
     model = News
     template_name = 'crud/create.html'
-    fields = ('title', 'body', 'image', 'category', 'status')
+    fields = ('title','body', 'slug', 'image', 'category', 'status')
 
 
 class NewsDeleteView(DeleteView):
