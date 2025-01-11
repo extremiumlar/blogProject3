@@ -30,7 +30,10 @@ urlpatterns = [
 # urls.py
     path('news/<str:title>/edit/', NewsUptadeView.as_view(), name='news_edit'),
     path('news/<str:title>/delete/', NewsDeleteView.as_view(), name='news_delete'),
-    path('newscreate/', NewsCreateView.as_view(), name='news_create'),
+
+
+    # path('news/create/', NewsCreateView.as_view(), name='news_create'), # new/create qilsa xatolik beryapti
+    path('create', NewsCreateView.as_view(), name='news_create'), # exitcreate ni o'zi qolsa xatolik yo'q
 
     path('contact/', ContactPageView.as_view(), name='contact'),
     path('404/', page_404_View, name="page_404"),

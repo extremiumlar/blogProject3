@@ -1,0 +1,13 @@
+{%extends 'news/base.html'%}
+{%load static%}
+
+{%block title%} Foydalanuvchi profili {%endblock%}
+{%block content%}
+    <h3>Xush kelibsiz , {{user.username}}</h3>
+    <h2>Sizning ma'lumotlaringiz :</h2>
+    <label>Username: </label> <input value="{{user.username}}"  readonly placeholder="Noma'lum"><br>
+    <label>Email : </label> <input value="{{user.email}}"  readonly placeholder="Noma'lum"><br>
+    <label>Ism : </label> <input value="{{user.name}}"  readonly placeholder="Noma'lum"><br>
+    <label>Familiya : </label> <input value="{{user.last_name}}" readonly placeholder="Noma'lum"><br>
+    <h4><a href="#">Parolni almashtirish</a></h4>
+{%endblock%}
