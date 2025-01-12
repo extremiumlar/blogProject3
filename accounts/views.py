@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
-from .forms import LoginForm
+from .forms import LoginForm, UserRegistrationForm
+
 
 def user_login(request):
     if request.method == 'POST':
@@ -25,3 +26,21 @@ def dashboard_view(request):
     user = request.user
     context = {'user': user}
     return render(request, 'pages/user_profile.html', context)
+
+def user_register(request):
+    if request.method == 'POST':
+        user_form = UserRegistrationForm(request.POST)
+        if user_form.is_valid():
+            new_user = user_form.save(commit=False)
+            new_user.set_password(
+                user_form.cleaned_data['password']
+            )
+            new_user.save()
+            context={'new_user': new_user}
+            return render(request, 'account/register_done.html', context)
+        else:
+            return HttpResponse("Ro'yxatdan o'tishda xatolik . Iltimos tekshirib qaytadan ro'yxatdan o'ting")
+    else :
+        user_form = UserRegistrationForm()
+        context = {'user_form': user_form}
+        return render(request, 'account/register.html',context)
