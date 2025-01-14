@@ -1,11 +1,13 @@
 from asgiref.typing import HTTPRequestEvent
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView, ListView, UpdateView, CreateView, DeleteView
 from django.urls import reverse, reverse_lazy
+
 from .models import News, Category
 from .form import ContactForm
-
+from config.custom_permissions import OnlyLoggedsuperUser
 # Create your views here.
 
 def news_list(request):
@@ -124,7 +126,7 @@ class SportPageView(ListView):
 #         news = self.model.objects.all()
 #         return news
 
-class NewsUptadeView(UpdateView):
+class NewsUptadeView(OnlyLoggedsuperUser,UpdateView):
     model = News
     fields = ['title', 'body', 'image', 'status']
     template_name = 'crud/update.html'
@@ -135,13 +137,13 @@ class NewsUptadeView(UpdateView):
         return self.model.objects.get(title=title)
 
 
-class NewsCreateView(CreateView):
+class NewsCreateView(OnlyLoggedsuperUser,CreateView):
     model = News
     template_name = 'crud/create.html'
     fields = ('title','body', 'slug', 'image', 'category', 'status')
 
 
-class NewsDeleteView(DeleteView):
+class NewsDeleteView(OnlyLoggedsuperUser,DeleteView):
     model = News
     template_name = 'crud/delete.html'
     success_url = reverse_lazy('home')
