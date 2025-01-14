@@ -14,7 +14,8 @@ from .views import (
     dashboard_view,
     user_register,
     SignupView,
-    edit_user
+    edit_user,
+    EditUserView,
 )
 
 urlpatterns = [
@@ -39,6 +40,10 @@ urlpatterns = [
     # tayyor createviewdan foydalangan url
     # path('signup/', SignupView.as_view(), name='signup'),
 
-    path('profile/edit/', edit_user, name = 'edit_user'),
+    # view funksiyada yozilgan url
+    # path('profile/edit/', edit_user, name = 'edit_user'),
+
+    # view classda yozilgan url
+    path('profile/edit', EditUserView.as_view(), name = 'edit_user'),
 
 ]

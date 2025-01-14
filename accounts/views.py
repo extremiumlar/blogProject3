@@ -1,7 +1,11 @@
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 from django.urls import reverse_lazy
+from django.views import View
+from django.shortcuts import redirect
 
 from .forms import LoginForm, UserRegistrationForm, UserEditForm, ProfileEditForm
 from django.contrib.auth.forms import UserCreationForm
@@ -25,9 +29,14 @@ def user_login(request):
         form = LoginForm()
     return render(request, 'registration/login.html', {'form': form})
 
+@login_required
 def dashboard_view(request):
     user = request.user
-    context = {'user': user}
+    profile = Profile.objects.get(user=user)
+    context = {
+        'user': user,
+        'profile': profile,
+    }
     return render(request, 'pages/user_profile.html', context)
 
 def user_register(request):
@@ -54,6 +63,9 @@ class SignupView(CreateView):
     success_url = reverse_lazy('login')
     template_name = 'account/register.html'
 
+# User profilini tahrirlash uchun funksiyada yozilgan view
+
+@login_required
 def edit_user(request):
     if request.method == 'POST':
         user_form = UserEditForm(instance=request.user , data = request.POST)
@@ -67,6 +79,24 @@ def edit_user(request):
         user_form = UserEditForm(instance=request.user)
         profile_form = ProfileEditForm(instance=request.user.profile)
     return render(request,'account/profile_edit.html',{'user_form':user_form,'profile_form':profile_form})
+
+# User profilini tahrirlash uchun classda yozilgan view
+
+class EditUserView(LoginRequiredMixin,View):
+    def get(self, request):
+        user_form = UserEditForm(instance=request.user)
+        profile_form = ProfileEditForm(instance=request.user.profile)
+        return render(request,'account/profile_edit.html',{'user_form':user_form,'profile_form':profile_form})
+    def post(self, request):
+        user_form = UserEditForm(instance=request.user, data=request.POST)
+        profile_form = ProfileEditForm(instance=request.user.profile,
+                                       data=request.POST,
+                                       files=request.FILES)
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            # return render(request,'account/profile_edit.html',{'user_form':user_form,'profile_form':profile_form})
+            return redirect('profile')
 
 
 
