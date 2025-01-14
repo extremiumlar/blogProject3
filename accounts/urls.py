@@ -8,13 +8,13 @@ from django.contrib.auth.views import (
     PasswordResetConfirmView,
     PasswordResetDoneView,
     PasswordResetCompleteView,
-
 )
 from .views import (
     user_login,
     dashboard_view,
     user_register,
-    SignupView
+    SignupView,
+    edit_user
 )
 
 urlpatterns = [
@@ -34,9 +34,11 @@ urlpatterns = [
     path('password-reset-complete/', PasswordResetCompleteView.as_view(), name='password_reset_complete'),
 
     # Forma va view qo'lda yozilgan url :
-    # path('signup/', user_register, name = 'signup'),
+    path('signup/', user_register, name = 'signup'),
 
     # tayyor createviewdan foydalangan url
-    path('signup/', SignupView.as_view(), name='signup'),
+    # path('signup/', SignupView.as_view(), name='signup'),
+
+    path('profile/edit/', edit_user, name = 'edit_user'),
 
 ]
