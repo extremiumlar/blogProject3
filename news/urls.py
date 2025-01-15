@@ -17,6 +17,7 @@ from .views import (
     NewsUptadeView,
     NewsDeleteView,
     NewsCreateView,
+    admin_page,
 )
 
 urlpatterns = [
@@ -39,6 +40,7 @@ urlpatterns = [
     path('404/', page_404_View, name="page_404"),
     path('uzbekiston/', UzbekistonPageView.as_view(), name='uzbekiston'),
     path('jahon/', JahonPageView.as_view(), name='jahon'),
-    path('iqtisod', IqtisodPageView.as_view(), name='iqtisod'),
-    path('sport', SportPageView.as_view(), name='sport'),
+    path('iqtisod/', IqtisodPageView.as_view(), name='iqtisod'),
+    path('sport/', SportPageView.as_view(), name='sport'),
+    path('admin-page/', admin_page , name='admin_page'),
 ]

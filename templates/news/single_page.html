@@ -19,12 +19,14 @@
                     <div class="single_page_content"><img class="img-center" src="{{news.image.url}}" alt="">
                         <p>{{news.body}}</p>
                     </div>
+                    {% if request.user.is_authenticated and request.user.is_superuser%}
                     <div class="card-footer text-center">
                         <a href="{% url 'news_edit' news.title%}">Tahrirlash</a>
                         <a href="{% url 'news_delete' news.title%}">O'chirish</a>
                         <a href="{% url 'news_create'%}">Yangilik qo'shish</a>
 
                     </div>
+                    {% endif %}
                     <div class="social_link">
                         <ul class="sociallink_nav">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>

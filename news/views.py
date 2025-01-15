@@ -1,10 +1,13 @@
 from asgiref.typing import HTTPRequestEvent
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView, ListView, UpdateView, CreateView, DeleteView
 from django.urls import reverse, reverse_lazy
 
+from accounts.models import Profile
 from .models import News, Category
 from .form import ContactForm
 from config.custom_permissions import OnlyLoggedsuperUser
@@ -152,6 +155,14 @@ class NewsDeleteView(OnlyLoggedsuperUser,DeleteView):
         title = self.kwargs.get('title')
         return self.model.objects.get(title=title)
 
+@login_required
+@user_passes_test(lambda u: u.is_superuser)
+def admin_page(request):
+    admin_users = User.objects.filter(is_superuser=True)
+    context = {
+        'admin_users':admin_users,
+    }
+    return render(request, 'pages/admin_page.html', context)
 
 
 

@@ -1,7 +1,7 @@
 {%extends 'news/base.html'%}
 {%load static%}
 
-{%block title%} Foydalanuvchi profili {%endblock%}
+{%block title%} Foydalanuvchi profili {%endblock title%}
 {%block content%}
     <h3>Xush kelibsiz , {{user.username}}</h3>
     <h3><a href="{%url 'logout'%}" class="text-danger">Saytdan chiqish</a></h3>
