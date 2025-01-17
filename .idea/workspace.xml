@@ -5,18 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cc7f95e-5f13-448e-a98c-5c9dcaacdfe5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/pages/admin_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/news/search_result.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/news/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/news/single_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news/single_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/user_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +173,12 @@
       <workItem from="1736923932936" duration="2242000" />
       <workItem from="1736936418858" duration="1789000" />
       <workItem from="1736947594222" duration="546000" />
-      <workItem from="1736978445637" duration="725000" />
+      <workItem from="1736978445637" duration="1321000" />
+      <workItem from="1737021987618" duration="696000" />
+      <workItem from="1737030448935" duration="5404000" />
+      <workItem from="1737110104518" duration="1571000" />
+      <workItem from="1737119826406" duration="3347000" />
+      <workItem from="1737135926866" duration="335000" />
     </task>
     <servers />
   </component>

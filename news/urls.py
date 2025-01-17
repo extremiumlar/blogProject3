@@ -18,13 +18,20 @@ from .views import (
     NewsDeleteView,
     NewsCreateView,
     admin_page,
+    SearchResultsView,
 )
 
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     path('news/', news_list, name='all_news_list'),
     # path('<int:id>/',news_detail,name='news_detail'),
+
+    # single pageni classlar orqali yozilgan varianti uchun url
+    # path('news/<str:title>/', ComentaryPageView.as_view(), name='single'),
+
+    # single pageni funksiya orqali qilingan varianti
     path('news/<str:title>/', single_View, name='single'),
+
     # path('news/<path:title>/edit', NewsUptadeView.as_view(), name='news_edit'),
     # path('news/<path:title>/edit/', NewsUptadeView.as_view(), name='news_edit'),
     # path('news/<title>/edit/', NewsUptadeView.as_view(), name='news_edit'),
@@ -43,4 +50,5 @@ urlpatterns = [
     path('iqtisod/', IqtisodPageView.as_view(), name='iqtisod'),
     path('sport/', SportPageView.as_view(), name='sport'),
     path('admin-page/', admin_page , name='admin_page'),
+    path('searchresult/', SearchResultsView.as_view(), name='search'),
 ]

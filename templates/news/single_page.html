@@ -26,7 +26,40 @@
                         <a href="{% url 'news_create'%}">Yangilik qo'shish</a>
 
                     </div>
+                    {% endif %}<br>
+                    {% for comment in comments%}
+
+                    <div class="comments" style="padding:10px">
+                        <p class="font-weight-bold">
+                            {{comment.user}}
+                            <span class="text-muted font-weight-normal">
+                                {{comment.created}}
+                            </span>
+                        </p>
+                        <p>{{comment.body | linebreaks}}</p>
+                    </div>
+                    {% endfor %}
+                    {% if request.user.is_authenticated%}
+                        <div class="col-md-8 card mb-4 mt-3">
+                            <div class="card-body">
+                                <form method="POST" style="margin-top: 1.3em">
+                                    {% csrf_token %}
+                                    {{comment_form.as_p}}
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        Saqlash
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    {% else %}
+                    <div class="card-body">
+                        <p class="text-danger"> Faqat ro'yxatdan o'tgan foydalanuvchilar izoh qoldirishi mumkin . </p>
+                        <a href="{% url 'login'%}">Saytga kirish</a>
+                    </div>
                     {% endif %}
+
+
+
                     <div class="social_link">
                         <ul class="sociallink_nav">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>

@@ -69,6 +69,11 @@
                     <li><a href="{%url 'jahon'%}">JAHON</a></li>
                     <li><a href="{%url 'sport'%}">SPORT</a></li>
                     <li><a href="{%url 'contact'%}">Bog'lanish</a></li>
+                    <li>
+                        <form method="get" action="{% url 'search' %}">
+                            <input type="search" name="q" placeholder="Qidirish" class="form-control">
+                        </form>
+                    </li>
                 </ul>
             </div>
         </nav>

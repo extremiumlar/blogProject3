@@ -1,15 +1,16 @@
-from asgiref.typing import HTTPRequestEvent
+
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
+from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import TemplateView, ListView, UpdateView, CreateView, DeleteView
+from django.views.generic import TemplateView, ListView, UpdateView, CreateView, DeleteView, DetailView
 from django.urls import reverse, reverse_lazy
 
 from accounts.models import Profile
-from .models import News, Category
-from .form import ContactForm
+from .models import News, Category,Comentary
+from .form import ContactForm,ComentaryForm
 from config.custom_permissions import OnlyLoggedsuperUser
 # Create your views here.
 
@@ -77,11 +78,88 @@ class ContactPageView(TemplateView):
 
 def single_View(request,title):
     news = get_object_or_404(News, title=title,status=News.Status.Published)
-    context = {'news':news}
+    comments = news.comments.filter(active=True)
+    new_comment = None
+    if request.method == 'POST':
+        comment_form = ComentaryForm(data = request.POST)
+        if comment_form.is_valid():
+            # yangi komment obyektini yaratamiz lekin DB ga saqlamaymiz
+            new_comment = comment_form.save(commit=False)
+            new_comment.user = request.user
+            new_comment.news = news
+            new_comment.save()
+            comment_form = ComentaryForm()
+    else :
+        comment_form = ComentaryForm()
+
+    context = {
+        'news':news,
+        'comments':comments,
+        'new_comment':new_comment,
+        'comment_form':comment_form,
+    }
     return render(request,'news/single_page.html',context)
+
+
+class ComentaryPageView(DetailView):
+    model = Comentary
+    template_name = 'news/single_page.html'
+    form_class = ComentaryForm
+    def get(self,request,title,*args,**kwargs):
+        news = get_object_or_404(News, title=title, status=News.Status.Published)
+        comments = news.comments.filter(active=True)
+        new_comment = None
+        comment_form = ComentaryForm()
+        context = {
+            'news': news,
+            'comments': comments,
+            'new_comment': new_comment,
+            'comment_form': comment_form,
+        }
+        return render(request, 'news/single_page.html', context)
+    def post(self,request,title,*args,**kwargs):
+        news = get_object_or_404(News, title=title, status=News.Status.Published)
+        comments = news.comments.filter(active=True)
+        new_comment = None
+        if request.method == 'POST':
+            comment_form = ComentaryForm(data=request.POST)
+            if comment_form.is_valid():
+                # yangi komment obyektini yaratamiz lekin DB ga saqlamaymiz
+                new_comment = comment_form.save(commit=False)
+                new_comment.user = request.user
+                new_comment.news = news
+                new_comment.save()
+                comment_form = ComentaryForm()
+
+        context = {
+            'news': news,
+            'comments': comments,
+            'new_comment': new_comment,
+            'comment_form': comment_form,
+        }
+        return render(request, 'news/single_page.html', context)
+
+
+
+
+
+
+
+
+
+
+
+
+
 def page_404_View(request):
     context = {}
     return render(request, 'news/404.html', context)
+
+
+
+
+
+
 
 class UzbekistonPageView(ListView):
     model = News
@@ -164,7 +242,16 @@ def admin_page(request):
     }
     return render(request, 'pages/admin_page.html', context)
 
+class SearchResultsView(ListView):
+    model = News
+    template_name = 'news/search_result.html'
+    context_object_name = 'barcha_yangiliklar'
 
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        return News.objects.filter(
+            Q(title__icontains=query)|Q(body__icontains=query)
+        )
 
 
 

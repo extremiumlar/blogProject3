@@ -2,6 +2,8 @@ from django.utils import timezone
 from django.db import models
 from django.urls import reverse
 from django.utils.text import slugify
+from django.contrib.auth.models import User
+
 
 class PublishedManager(models.Manager):
     def get_queryset(self):
@@ -43,3 +45,19 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+class Comentary(models.Model):
+    news = models.ForeignKey(News,
+                             on_delete=models.CASCADE,
+                             related_name='comments')
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    body = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ['-created']
+        # ordering = ['created'] # Birinchi yozilgan cament birinchi chiqadi
+
+    def __str__(self):
+        return f"Comment - {self.body} by {self.user}"
