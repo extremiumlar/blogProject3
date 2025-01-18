@@ -20,6 +20,23 @@
     </tr>
     {% endfor %}
 </table>
+{% for comment in comments %}
+    <div class="comment">
+        <p><strong>{{ comment.user }}</strong></p>
+        <p>{{ comment.body }}</p>
+        <p><small>{{ comment.created }}</small></p>
+
+        {% if request.user.is_superuser %}
+            <!-- Adminga izohni disable qilish imkoniyati -->
+            <form method="POST" action="{% url 'disable_comment' comment.id %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-warning btn-sm">Disable</button>
+            </form>
+        {% endif %}
+    </div>
+{% empty %}
+    <p>No comments found.</p>
+{% endfor %}
 
 <h2 class="text-primary"><a href="{% url 'news_create' %}" class="text-primary">+Yanglilik qo'shish</a></h2>
 

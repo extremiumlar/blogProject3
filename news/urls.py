@@ -19,7 +19,7 @@ from .views import (
     NewsCreateView,
     admin_page,
     SinglePageView,
-    SearchResultsView,
+    SearchResultsView, Disable_comment,
 )
 
 urlpatterns = [
@@ -52,4 +52,5 @@ urlpatterns = [
     path('sport/', SportPageView.as_view(), name='sport'),
     path('admin-page/', admin_page , name='admin_page'),
     path('searchresult/', SearchResultsView.as_view(), name='search'),
+    path('disablecomment/<int:comment_id>/',Disable_comment,name='disable_comment'),
 ]

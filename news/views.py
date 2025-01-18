@@ -4,7 +4,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.db.models import Q
 from django.http import HttpResponse
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404,redirect
 from django.views.generic import TemplateView, ListView, UpdateView, CreateView, DeleteView, DetailView
 from django.urls import reverse, reverse_lazy
 
@@ -12,7 +12,6 @@ from accounts.models import Profile
 from .models import News, Category,Comentary
 from .form import ContactForm,ComentaryForm
 from config.custom_permissions import OnlyLoggedsuperUser
-# Create your views here.
 from hitcount.views import HitCountDetailView
 
 def news_list(request):
@@ -109,59 +108,41 @@ class SinglePageView(HitCountDetailView):
     def get(self,request,title,*args,**kwargs):
         news = get_object_or_404(News, title=title, status=News.Status.Published)
         comments = news.comments.filter(active=True)
-        new_comment = None
+        comments_count = comments.count
         comment_form = ComentaryForm()
         context = {
             'news': news,
             'comments': comments,
-            'new_comment': new_comment,
             'comment_form': comment_form,
+            'comments_count': comments_count,
         }
         return render(request, 'news/single_page.html', context)
     def post(self,request,title,*args,**kwargs):
         news = get_object_or_404(News, title=title, status=News.Status.Published)
         comments = news.comments.filter(active=True)
-        comment_form = ComentaryForm(data = request.POST)
+        comments_count = comments.count()
         new_comment = None
-        if request.method == 'POST':
-            comment_form = ComentaryForm(data=request.POST)
-            if comment_form.is_valid():
-                # yangi komment obyektini yaratamiz lekin DB ga saqlamaymiz
-                new_comment = comment_form.save(commit=False)
-                new_comment.user = request.user
-                new_comment.news = news
-                new_comment.save()
-                comment_form = ComentaryForm()
+        comment_form = ComentaryForm(data=request.POST)
+        if comment_form.is_valid():
+            # yangi komment obyektini yaratamiz lekin DB ga saqlamaymiz
+            new_comment = comment_form.save(commit=False)
+            new_comment.user = request.user
+            new_comment.news = news
+            new_comment.save()
+            return redirect(reverse('single', kwargs={'title': title}))
 
         context = {
             'news': news,
             'comments': comments,
             'new_comment': new_comment,
             'comment_form': comment_form,
+            'comments_count': comments_count,
         }
         return render(request, 'news/single_page.html', context)
-
-
-
-
-
-
-
-
-
-
-
-
 
 def page_404_View(request):
     context = {}
     return render(request, 'news/404.html', context)
-
-
-
-
-
-
 
 class UzbekistonPageView(ListView):
     model = News
@@ -239,8 +220,10 @@ class NewsDeleteView(OnlyLoggedsuperUser,DeleteView):
 @user_passes_test(lambda u: u.is_superuser)
 def admin_page(request):
     admin_users = User.objects.filter(is_superuser=True)
+    comments = Comentary.objects.filter(active=True)
     context = {
         'admin_users':admin_users,
+        'comments':comments,
     }
     return render(request, 'pages/admin_page.html', context)
 
@@ -255,6 +238,11 @@ class SearchResultsView(ListView):
             Q(title__icontains=query)|Q(body__icontains=query)
         )
 
+def Disable_comment(request,comment_id):
+    comment = get_object_or_404(Comentary, id=comment_id)
+    comment.active = False
+    comment.save()
+    return redirect('admin_page')
 
 
 
