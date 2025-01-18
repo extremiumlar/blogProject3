@@ -18,6 +18,7 @@ from .views import (
     NewsDeleteView,
     NewsCreateView,
     admin_page,
+    SinglePageView,
     SearchResultsView,
 )
 
@@ -27,10 +28,10 @@ urlpatterns = [
     # path('<int:id>/',news_detail,name='news_detail'),
 
     # single pageni classlar orqali yozilgan varianti uchun url
-    # path('news/<str:title>/', ComentaryPageView.as_view(), name='single'),
+    path('news/<str:title>/', SinglePageView.as_view(), name='single'),
 
     # single pageni funksiya orqali qilingan varianti
-    path('news/<str:title>/', single_View, name='single'),
+    # path('news/<str:title>/', single_View, name='single'),
 
     # path('news/<path:title>/edit', NewsUptadeView.as_view(), name='news_edit'),
     # path('news/<path:title>/edit/', NewsUptadeView.as_view(), name='news_edit'),

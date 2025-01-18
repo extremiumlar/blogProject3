@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     # O'zim yaratgan applar
     'news',
     'accounts',
+    # yuklangan applar
+    'hitcount'
 ]
 
 MIDDLEWARE = [

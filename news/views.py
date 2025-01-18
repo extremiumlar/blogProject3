@@ -13,6 +13,7 @@ from .models import News, Category,Comentary
 from .form import ContactForm,ComentaryForm
 from config.custom_permissions import OnlyLoggedsuperUser
 # Create your views here.
+from hitcount.views import HitCountDetailView
 
 def news_list(request):
     news_list = News.objects.all()
@@ -101,10 +102,10 @@ def single_View(request,title):
     return render(request,'news/single_page.html',context)
 
 
-class ComentaryPageView(DetailView):
-    model = Comentary
+class SinglePageView(HitCountDetailView):
+    model = News
     template_name = 'news/single_page.html'
-    form_class = ComentaryForm
+    count_hit = True
     def get(self,request,title,*args,**kwargs):
         news = get_object_or_404(News, title=title, status=News.Status.Published)
         comments = news.comments.filter(active=True)
@@ -120,6 +121,7 @@ class ComentaryPageView(DetailView):
     def post(self,request,title,*args,**kwargs):
         news = get_object_or_404(News, title=title, status=News.Status.Published)
         comments = news.comments.filter(active=True)
+        comment_form = ComentaryForm(data = request.POST)
         new_comment = None
         if request.method == 'POST':
             comment_form = ComentaryForm(data=request.POST)

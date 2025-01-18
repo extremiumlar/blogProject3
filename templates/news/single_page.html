@@ -1,5 +1,6 @@
 {% extends 'news/base.html' %}
 {% load static %}
+{% load hitcount_tags %}
 
 {% block content %}
 <section id="contentSection">
@@ -14,8 +15,7 @@
                     </ol>
                     <h1>{{news.title}}</h1>
                     <div class="post_commentbox"><a href="#"><i class="fa fa-user"></i>Nurullo</a> <span><i
-                            class="fa fa-calendar"></i>{{news.published_time}}</span> <a href="#"><i
-                            class="fa fa-tags"></i>Technology</a></div>
+                            class="fa fa-calendar"></i>{{news.publish_time}} | Ko'rilganlar soni : {% get_hit_count for news %}</span>
                     <div class="single_page_content"><img class="img-center" src="{{news.image.url}}" alt="">
                         <p>{{news.body}}</p>
                     </div>
