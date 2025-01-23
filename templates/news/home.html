@@ -1,8 +1,9 @@
 {% extends 'news/base.html' %}
 
 {% load static %}
+{% load i18n %}
 
-{% block title%} Asosiy sahifa{% endblock title%}
+{% block title%} {% blocktrans %} Asosiy sahifa {%endblocktrans%} {% endblock title%}
 
 {% block content %}
 <section id="sliderSection">
@@ -13,8 +14,8 @@
                 <div class="single_iteam"><a href="{{news.get_absolute_url}}"> <img src="{{news.image.url}}"
                                                                                      alt=""></a>
                     <div class="slider_article">
-                        <h2><a class="slider_tittle" href="{{news.get_absolute_url}}">{{news.title}}</a></h2>
-                        <p>{{news.slug}}</p>
+                        <h2><a class="slider_tittle" href="{{news.get_absolute_url}}">{% blocktrans %} {{news.title}} {%endblocktrans%}</a></h2>
+                        <p>{% blocktrans %} {{news.slug}} {%endblocktrans%}</p>
                     </div>
                 </div>
                 {% endfor %}
@@ -22,7 +23,7 @@
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
             <div class="latest_post">
-                <h2><span>Oxirgi xabarlar</span></h2>
+                <h2><span>{% blocktrans %} Oxirgi xabarlar {%endblocktrans%}</span></h2>
                 <div class="latest_post_container" style="max-height: 400px; overflow-y: auto;">
                     <ul class="latest_postnav">
                         {% for news in news_list %}

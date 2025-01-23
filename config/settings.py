@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 
-from django.conf.global_settings import STATICFILES_FINDERS, LOGIN_REDIRECT_URL
+from django.conf.global_settings import STATICFILES_FINDERS, LOGIN_REDIRECT_URL, LOCALE_PATHS
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -46,12 +46,15 @@ INSTALLED_APPS = [
     'news',
     'accounts',
     # yuklangan applar
-    'hitcount'
+    'hitcount',
+    'modeltranslation',
+
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "django.middleware.locale.LocaleMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -147,8 +150,17 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 LOGIN_URL = 'login'
 
+from django.utils.translation import gettext_lazy as _
 
+LANGUAGES = [
+    ("uz", _("O'zbek")),
+    ("en", _("English")),
+    ("ru", _("Russian")),
+]
 
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'uz'
+
+LOCALE_PATHS = BASE_DIR,'locale'
 
 
 

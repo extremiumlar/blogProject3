@@ -204,7 +204,7 @@ class NewsUptadeView(OnlyLoggedsuperUser,UpdateView):
 class NewsCreateView(OnlyLoggedsuperUser,CreateView):
     model = News
     template_name = 'crud/create.html'
-    fields = ('title','body', 'slug', 'image', 'category', 'status')
+    fields = ('title','title_uz','title_en','title_ru','body','body_uz','body_en','body_ru','slug','slug_uz','slug_en','slug_ru', 'image', 'category', 'status')
 
 
 class NewsDeleteView(OnlyLoggedsuperUser,DeleteView):
