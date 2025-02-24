@@ -5,7 +5,276 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cc7f95e-5f13-448e-a98c-5c9dcaacdfe5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/blogProject3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blogProject3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/envsubst.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/gettext.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/iconv.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/msgattrib.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/msgcat.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/msgcmp.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/msgcomm.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/msgconv.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/msgen.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/msgexec.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/msgfilter.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/msgfmt.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/msggrep.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/msginit.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/msgmerge.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/msgunfmt.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/msguniq.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/ngettext.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/recode-sr-latin.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/bin/xgettext.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/lib/GNU.Gettext.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/lib/gettext/GNU.Gettext.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/lib/gettext/common/supplemental/plurals.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/lib/gettext/msgfmt.net.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/lib/gettext/msgunfmt.net.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/libexec/gettext/cldr-plurals.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/libexec/gettext/hostname.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/libexec/gettext/project-id" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/libexec/gettext/urlget.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/libexec/gettext/user-email" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/license-cldr.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/license-gettext.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/license-iconv.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/FAQ.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/csharpdoc/GNU_Gettext.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/csharpdoc/GNU_Gettext_GettextResourceManager.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/csharpdoc/GNU_Gettext_GettextResourceSet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/csharpdoc/begin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/csharpdoc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/csharpdoc/namespaces.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/envsubst.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_11.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_13.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_15.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_16.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_17.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_18.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_19.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_20.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_21.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_22.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_23.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_24.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_25.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_26.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_27.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_28.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_29.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_30.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_abt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_fot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/gettext_toc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/javadoc2/allclasses-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/javadoc2/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/javadoc2/gnu/gettext/GettextResource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/javadoc2/gnu/gettext/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/javadoc2/gnu/gettext/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/javadoc2/gnu/gettext/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/javadoc2/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/javadoc2/index-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/javadoc2/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/javadoc2/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/javadoc2/package-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/javadoc2/packages.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/javadoc2/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/javadoc2/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/msgattrib.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/msgcat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/msgcmp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/msgcomm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/msgconv.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/msgen.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/msgexec.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/msgfilter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/msgfmt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/msggrep.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/msginit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/msgmerge.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/msgunfmt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/msguniq.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/ngettext.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/recode-sr-latin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/tutorial.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/gettext/xgettext.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/iconv.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/libasprintf/autosprintf_all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/libtextstyle/libtextstyle_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/libtextstyle/libtextstyle_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/libtextstyle/libtextstyle_3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/libtextstyle/libtextstyle_4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/libtextstyle/libtextstyle_5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/libtextstyle/libtextstyle_6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/libtextstyle/libtextstyle_7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/libtextstyle/libtextstyle_abt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/doc/libtextstyle/libtextstyle_toc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/its/docbook.loc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/its/docbook4.its" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/its/docbook5.its" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/its/glade.loc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/its/glade1.its" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/its/glade2.its" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/its/gsettings.its" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/its/gsettings.loc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/its/gtkbuilder.its" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/its/metainfo.its" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/its/metainfo.loc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/msgunfmt.tcl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/styles/po-default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/styles/po-emacs-x.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/styles/po-emacs-xterm.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/styles/po-emacs-xterm16.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/styles/po-emacs-xterm256.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/gettext/styles/po-vim.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/af/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ast/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/be/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/be/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/bg/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/bg/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/bg/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ca/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ca/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ca/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/cs/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/cs/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/cs/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/da/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/da/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/da/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/de/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/de/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/de/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/el/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/el/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/el/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/en@boldquot/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/en@boldquot/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/en@quot/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/en@quot/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/eo/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/eo/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/es/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/es/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/es/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/et/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/et/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/et/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/eu/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/fi/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/fi/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/fi/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/fr/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/fr/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/fr/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ga/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ga/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/gl/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/gl/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/gl/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/hr/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/hr/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/hr/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/hu/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/hu/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/id/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/id/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/id/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/it/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/it/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/it/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ja/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ja/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ja/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ka/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ka/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ko/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ko/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ko/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/lt/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/nb/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/nb/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/nl/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/nl/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/nl/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/nn/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/nn/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/pa/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/pl/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/pl/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/pl/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/pt/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/pt/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/pt_BR/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/pt_BR/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/pt_BR/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/rm/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ro/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ro/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ro/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ru/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ru/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/ru/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/sk/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/sk/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/sk/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/sl/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/sl/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/sl/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/sq/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/sr/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/sr/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/sr/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/sv/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/sv/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/sv/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/tr/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/tr/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/tr/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/uk/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/uk/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/uk/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/vi/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/vi/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/vi/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/wa/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/zh_CN/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/zh_CN/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/zh_CN/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/zh_HK/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/zh_TW/LC_MESSAGES/gettext-runtime.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/zh_TW/LC_MESSAGES/gettext-tools.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettext0.23-iconv1.17-static-64/share/locale/zh_TW/LC_MESSAGES/libiconv.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/news/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/news/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/news/single_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news/single_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +312,11 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/.virtualenvs/kimtex-rDQhV2a0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/Zomin&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -71,7 +342,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
-      <option name="host" value="localhost" />
+      <option name="host" value="" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
@@ -84,8 +355,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23726.102" />
-        <option value="bundled-python-sdk-5e1850174b45-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23726.102" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-PY-243.23654.177" />
+        <option value="bundled-python-sdk-91d3a02ef49d-43b77aa2d136-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.23654.177" />
       </set>
     </attachedChunks>
   </component>
@@ -181,7 +452,61 @@
       <workItem from="1737572127851" duration="2548000" />
       <workItem from="1737613325265" duration="2922000" />
       <workItem from="1737624248569" duration="1378000" />
-      <workItem from="1737632777339" duration="1646000" />
+      <workItem from="1737632777339" duration="2508000" />
+      <workItem from="1737702165402" duration="1320000" />
+      <workItem from="1737720234583" duration="516000" />
+      <workItem from="1737968051517" duration="1105000" />
+      <workItem from="1737978404318" duration="2680000" />
+      <workItem from="1737991173168" duration="1474000" />
+      <workItem from="1738060565828" duration="284000" />
+      <workItem from="1738080847490" duration="809000" />
+      <workItem from="1738093846527" duration="659000" />
+      <workItem from="1738129645784" duration="1697000" />
+      <workItem from="1738135731213" duration="60000" />
+      <workItem from="1738138026268" duration="2523000" />
+      <workItem from="1738164828208" duration="2000" />
+      <workItem from="1738209242604" duration="19000" />
+      <workItem from="1738212454446" duration="649000" />
+      <workItem from="1738218933725" duration="20000" />
+      <workItem from="1738243344186" duration="2672000" />
+      <workItem from="1738296139024" duration="108000" />
+      <workItem from="1738334398490" duration="2766000" />
+      <workItem from="1738345931783" duration="305000" />
+      <workItem from="1738490547424" duration="2451000" />
+      <workItem from="1738502858301" duration="8000" />
+      <workItem from="1738585438824" duration="871000" />
+      <workItem from="1738587397008" duration="14000" />
+      <workItem from="1738640122497" duration="1296000" />
+      <workItem from="1738641729405" duration="5000" />
+      <workItem from="1738907301093" duration="492000" />
+      <workItem from="1739289813767" duration="1390000" />
+      <workItem from="1739341257636" duration="733000" />
+      <workItem from="1739367780225" duration="262000" />
+      <workItem from="1739368163969" duration="1653000" />
+      <workItem from="1739444859174" duration="1243000" />
+      <workItem from="1739450025813" duration="1207000" />
+      <workItem from="1739467744693" duration="33000" />
+      <workItem from="1739468114436" duration="594000" />
+      <workItem from="1739503119139" duration="12000" />
+      <workItem from="1739509050974" duration="1782000" />
+      <workItem from="1739515499663" duration="5000" />
+      <workItem from="1739607162971" duration="848000" />
+      <workItem from="1739608052137" duration="30000" />
+      <workItem from="1739608910322" duration="2896000" />
+      <workItem from="1739646335595" duration="2680000" />
+      <workItem from="1739722217714" duration="145000" />
+      <workItem from="1739723128076" duration="2094000" />
+      <workItem from="1739762965064" duration="24000" />
+      <workItem from="1739804496021" duration="3162000" />
+      <workItem from="1739855501948" duration="1689000" />
+      <workItem from="1739877045353" duration="7000" />
+      <workItem from="1740111121076" duration="4524000" />
+      <workItem from="1740144029161" duration="2342000" />
+      <workItem from="1740366368188" duration="5493000" />
+      <workItem from="1740375051944" duration="940000" />
+      <workItem from="1740376094331" duration="974000" />
+      <workItem from="1740377084827" duration="3000" />
+      <workItem from="1740384486961" duration="683000" />
     </task>
     <servers />
   </component>

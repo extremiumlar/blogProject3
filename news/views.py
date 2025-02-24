@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404,redirect
-from django.views.generic import TemplateView, ListView, UpdateView, CreateView, DeleteView, DetailView
+from django.views.generic import TemplateView, ListView, UpdateView, CreateView, DeleteView, DetailView, FormView
 from django.urls import reverse, reverse_lazy
 
 from accounts.models import Profile
@@ -51,6 +51,9 @@ class HomeView(ListView):
         context['sport_news'] = self.model.objects.all().filter(category__name = "Sport").order_by('-publish_time')[:5]
         return context
 
+
+# funksiya orqali qilingan contactview
+
 # def contact_View(request):
 #     form = ContactForm(request.POST or None)
 #     if request.method == 'POST' and form.is_valid():
@@ -58,6 +61,19 @@ class HomeView(ListView):
 #         return HttpResponse("<h2> Biz bilan bog'langaniz uchun raxmat !")
 #     context = {'form':form}
 #     return render(request, 'news/contact.html', context)
+
+# funskiyadagi viewni classga aylantirilgan varianti chat.deepseek.com yordamida (test qib ko'rmadim hali)
+
+# class ContactPageView(FormView):
+#     template_name = 'news/contact.html'  # Shablon faylning manzili
+#     form_class = ContactForm  # Foydalaniladigan forma
+#     success_url = '/'  # Forma muvaffaqiyatli to'ldirilgandan so'ng yo'naltiriladigan URL
+#
+#     def form_valid(self, form):
+#         # Forma to'g'ri to'ldirilgan bo'lsa, uni saqlaymiz
+#         form.save()
+#         # Foydalanuvchiga xabar qaytaramiz
+#         return HttpResponse("<h2> Biz bilan bog'langaniz uchun raxmat!</h2>")
 
 class ContactPageView(TemplateView):
     template_name = 'news/contact.html'
@@ -73,6 +89,7 @@ class ContactPageView(TemplateView):
             return HttpResponse("<h2>Biz bilan bog'langaningiz uchun tashakkur</h2>")
         context = {'form':form}
         return render(request,'news/contact.html',context)
+
 
 
 
@@ -243,7 +260,6 @@ def Disable_comment(request,comment_id):
     comment.active = False
     comment.save()
     return redirect('admin_page')
-
 
 
 

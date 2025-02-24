@@ -1,9 +1,9 @@
-{% load static%}
-
+{% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{%block title%}{%endblock title%}</title>
+    <title>{% block title %}{% endblock title %}</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,30 +29,30 @@
                 <div class="header_top">
                     <div class="header_top_left">
                         <ul class="top_nav">
-                            <li><a href="{%url 'home'%}">Home</a></li>
+                            <li><a href="{% url 'home' %}">Home</a></li>
                             <li><a href="#">About</a></li>
                             <li><a href="{% url 'contact' %}">Contact</a></li>
-                            {% if user.is_authenticated and user.is_superuser%}
-                            <li><a href="{%url 'admin_page'%}">Admin sahifasi</a></li>
+                            {% if user.is_authenticated and user.is_superuser %}
+                                <li><a href="{% url 'admin_page' %}">Admin sahifasi</a></li>
                             {% endif %}
                         </ul>
                     </div>
                     <div class="header_top_right">
                         {% if user.is_authenticated %}
-                        <p><a href="{% url 'logout' %}" style="color:palegreen">Logout</a></p>
-                        <p><a href="{% url 'profile' %}" style="color: yellow">Profil</a></p>
+                            <p><a href="{% url 'logout' %}" style="color:palegreen">Logout</a></p>
+                            <p><a href="{% url 'profile' %}" style="color: yellow">Profil</a></p>
                         {% else %}
-                        <p><a href="{% url 'login' %}" style="color: yellow">Saytga kirish</a></p>
+                            <p><a href="{% url 'login' %}" style="color: yellow">Saytga kirish</a></p>
                         {% endif %}
-                        <p>{% now "js F Y H:i"%}</p>
+                        <p>{% now "js F Y H:i" %}</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="header_bottom">
-                    <div class="logo_area"><a href="{%url 'home'%}" class="logo"><img
-                            src="{% static 'images/logo.jpg'%}" alt=""></a></div>
-                    <div class="add_banner"><a href="#"><img src="{% static 'images/addbanner_728x90_V1.jpg'%}" alt=""></a>
+                    <div class="logo_area"><a href="{% url 'home' %}" class="logo"><img
+                            src="{% static 'images/logo.jpg' %}" alt=""></a></div>
+                    <div class="add_banner"><a href="#"><img src="{% static 'images/addbanner_728x90_V1.jpg' %}" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -68,13 +68,13 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav main_nav">
-                    <li class="active"><a href="{%url 'home'%}"><span class="fa fa-home desktop-home"></span><span
+                    <li class="active"><a href="{% url 'home' %}"><span class="fa fa-home desktop-home"></span><span
                             class="mobile-show">Asosiy</span></a></li>
-                    <li><a href="{%url 'uzbekiston'%}">O'ZBEKISTON</a></li>
-                    <li><a href="{%url 'iqtisod'%}">IQTISODIYOT</a></li>
-                    <li><a href="{%url 'jahon'%}">JAHON</a></li>
-                    <li><a href="{%url 'sport'%}">SPORT</a></li>
-                    <li><a href="{%url 'contact'%}">Bog'lanish</a></li>
+                    <li><a href="{% url 'uzbekiston' %}">O'ZBEKISTON</a></li>
+                    <li><a href="{% url 'iqtisod' %}">IQTISODIYOT</a></li>
+                    <li><a href="{% url 'jahon' %}">JAHON</a></li>
+                    <li><a href="{% url 'sport' %}">SPORT</a></li>
+                    <li><a href="{% url 'contact' %}">Bog'lanish</a></li>
                     <li>
                         <form method="get" action="{% url 'search' %}">
                             <input type="search" name="q" placeholder="Qidirish" class="form-control">
@@ -82,30 +82,31 @@
                     </li>
                 </ul>
             </div>
-            <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-                <input name="next" type="hidden" value="{{ redirect_to }}">
-                <select name="language">
-                    {% get_current_language as LANGUAGE_CODE %}
-                    {% get_available_languages as LANGUAGES %}
-                    {% get_language_info_list for LANGUAGES as languages %}
-                    {% for language in languages %}
+        </nav>
+        <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+            <input name="next" type="hidden" value="{{ redirect_to }}">
+            <select name="language">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
                     <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected{% endif %}>
                         {{ language.name_local }} ({{ language.code }})
                     </option>
-                    {% endfor %}
-                </select>
-                <input type="submit" value="Go">
-            </form>
-        </nav>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Go">
+        </form>
     </section>
     <section id="newsSection">
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="latest_newsarea"><span>Oxirgi xabarlar</span>
                     <ul id="ticker01" class="news_sticker">
-                        {% for news in latest_news%}
-                        <li><a href="{{news.get_absolute_url}}"><img src="{{news.image.url}}" alt="">{{news.title}}</a>
-                        </li>
+                        {% for news in latest_news %}
+                            <li><a href="{{ news.get_absolute_url }}"><img src="{{ news.image.url }}"
+                                                                           alt="">{{ news.title }}</a>
+                            </li>
                         {% endfor %}
                     </ul>
                     <div class="social_area">
@@ -126,9 +127,9 @@
     </section>
 
 
-    {% block content%}
+    {% block content %}
 
-    {% endblock content%}
+    {% endblock content %}
 
     <footer id="footer">
         <div class="footer_top">
@@ -142,10 +143,10 @@
                     <div class="footer_widget wow fadeInDown">
                         <h2>Tezkor linklar</h2>
                         <ul class="tag_nav">
-                            <li><a href="{%url 'home'%}">Bosh sahifa</a></li>
-                            <li><a href="{%url 'contact'%}">Bog'lanish uchun</a></li>
-                            {% for category in categories%}
-                            <li><a href="{%url 'home'%}">{{category.name}}</a></li>
+                            <li><a href="{% url 'home' %}">Bosh sahifa</a></li>
+                            <li><a href="{% url 'contact' %}">Bog'lanish uchun</a></li>
+                            {% for category in categories %}
+                                <li><a href="{% url 'home' %}">{{ category.name }}</a></li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -154,7 +155,7 @@
                     <div class="footer_widget wow fadeInRightBig">
                         <h2>Bog'lanish</h2>
                         <ul class="tag_nav">
-                            <li><a href="{%url 'contact'%}">Bizning saytdan foydalanganligiz uchun tashakkur. Iltimos
+                            <li><a href="{% url 'contact' %}">Bizning saytdan foydalanganligiz uchun tashakkur. Iltimos
                                 fikr mulohazalaringizni biz bilan baham ko'ring.</a></li>
                         </ul>
                     </div>
@@ -162,7 +163,7 @@
             </div>
         </div>
         <div class="footer_bottom">
-            <p class="copyright">Copyright &copy; 2045 <a href="{%url 'home'%}">NewsFeed</a></p>
+            <p class="copyright">Copyright &copy; 2045 <a href="{% url 'home' %}">NewsFeed</a></p>
             <p class="developer">Developed By Wpfreeware</p>
         </div>
     </footer>
@@ -170,16 +171,16 @@
 
 
 {% block javascript %}
-<script src="{%static 'js/jquery.min.js'%}"></script>
-<script src="{%static 'js/wow.min.js'%}"></script>
-<script src="{%static 'js/bootstrap.min.js'%}"></script>
-<script src="{%static 'js/slick.min.js'%}"></script>
-<script src="{%static 'js/jquery.li-scroller.1.0.js'%}"></script>
-<script src="{%static 'js/jquery.newsTicker.min.js'%}"></script>
-<script src="{%static 'js/jquery.fancybox.pack.js'%}"></script>
-<script src="{%static 'js/custom.js'%}"></script>
-<script src="{%static 'js/html5shiv.min.js' %}"></script>
-<script src="{%static 'js/respond.min.js' %}"></script>
-{% endblock javascript%}
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <script src="{% static 'js/jquery.li-scroller.1.0.js' %}"></script>
+    <script src="{% static 'js/jquery.newsTicker.min.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'js/html5shiv.min.js' %}"></script>
+    <script src="{% static 'js/respond.min.js' %}"></script>
+{% endblock javascript %}
 </body>
 </html>

@@ -8,7 +8,7 @@
     <p>Iltimos saytga kirish uchun quyidagi formani to'lgidiring !</p>
     <form method="post">{% csrf_token %}
         {{form.as_p}}
-        <input type="submit" value="Kirish"></input>
+        <input type="submit" value="Kirish">
     </form>
     <h4><a href = "{%url 'signup'%}" style="color:red">Ro'yxatdan o'tish</a></h4>
     <h5>Parolni unutdingizmi ? <a href="{%url 'password_reset'%}" class ="text-danger">Battar bo'ling !</a></h5>

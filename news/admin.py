@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import News, Category, Contact, Comentary
 
-# Register your models here.
+
 
 @admin.register(News)
 class NewsAdmin(admin.ModelAdmin):

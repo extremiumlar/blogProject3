@@ -14,8 +14,8 @@
                 <div class="single_iteam"><a href="{{news.get_absolute_url}}"> <img src="{{news.image.url}}"
                                                                                      alt=""></a>
                     <div class="slider_article">
-                        <h2><a class="slider_tittle" href="{{news.get_absolute_url}}">{% blocktrans %} {{news.title}} {%endblocktrans%}</a></h2>
-                        <p>{% blocktrans %} {{news.slug}} {%endblocktrans%}</p>
+                        <h2><a class="slider_tittle" href="{{news.get_absolute_url}}">{{news.title}}</a></h2>
+                        <p>{{news.slug}}</p>
                     </div>
                 </div>
                 {% endfor %}
@@ -52,7 +52,7 @@
         <div class="col-lg-8 col-md-8 col-sm-8">
             <div class="left_content">
                 <div class="single_post_content">
-                    <h2><span>O'zbekistondagi yangiliklar</span></h2>
+                    <h2><span>{%blocktrans%}O'zbekistondagi yangiliklar{%endblocktrans%}</span></h2>
                     <div class="single_post_content_left">
                         <ul class="business_catgnav  wow fadeInDown">
                             {% for local in uzb_news %}
@@ -90,7 +90,7 @@
                 <div class="fashion_technology_area">
                     <div class="fashion">
                         <div class="single_post_content">
-                            <h2><span>Jahon</span></h2>
+                            <h2><span>{%blocktrans%}Jahon{%endblocktrans%}</span></h2>
                             <ul class="business_catgnav wow fadeInDown">
                                 {% for jahon in jahon_news %}
                                 {% if forloop.first %}
@@ -125,7 +125,7 @@
                     </div>
                     <div class="technology">
                         <div class="single_post_content">
-                            <h2><span>Iqtisodiyot</span></h2>
+                            <h2><span>{%blocktrans%}Iqtisodiyot{%endblocktrans%}</span></h2>
                             <ul class="business_catgnav">
                                 {% for iqtisod in iqtisod_news %}
                                 {% if forloop.first %}
@@ -160,7 +160,7 @@
                     </div>
                 </div>
                 <div class="single_post_content">
-                    <h2><span>Photography</span></h2>
+                    <h2><span>{%blocktrans%}Photography{%endblocktrans%}</span></h2>
                     <ul class="photograph_nav  wow fadeInDown">
                         <li>
                             <div class="photo_grid">
@@ -219,7 +219,7 @@
                     </ul>
                 </div>
                 <div class="single_post_content">
-                    <h2><span>Sport</span></h2>
+                    <h2><span>{%blocktrans%}Sport{%endblocktrans%}</span></h2>
                     <div class="single_post_content_left">
                         <ul class="business_catgnav">
                             {%for sport in sport_news%}
@@ -260,7 +260,7 @@
         <div class="col-lg-4 col-md-4 col-sm-4">
             <aside class="right_content">
                 <div class="single_sidebar">
-                    <h2><span>Popular Post</span></h2>
+                    <h2><span>{%blocktrans%}Popular Post{%endblocktrans%}</span></h2>
                     <ul class="spost_nav">
                         <li>
                             <div class="media wow fadeInDown"><a href="pages/single_page.html" class="media-left">
@@ -362,7 +362,7 @@
                     <h2><span>Sponsor</span></h2>
                     <a class="sideAdd" href="#"><img src="{%static 'images/add_img.jpg'%}" alt=""></a></div>
                 <div class="single_sidebar wow fadeInDown">
-                    <h2><span>Kerakli bo'limlar</span></h2>
+                    <h2><span>{%blocktrans%}Kerakli bo'limlar{%endblocktrans%}</span></h2>
                     <select class="catgArchive">
                         <option>Kerakli bo'limni tanlang</option>
                         {%for category in categories%}

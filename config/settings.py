@@ -131,6 +131,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+LOCALE_PATHS = [BASE_DIR / 'locale']
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR/'static']
 STATIC_ROOT = BASE_DIR/'staticfiles'
@@ -160,7 +162,7 @@ LANGUAGES = [
 
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'uz'
 
-LOCALE_PATHS = BASE_DIR,'locale'
+# LOCALE_PATHS = BASE_DIR,'locale'
 
 
 
